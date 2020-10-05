@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  HEIGHT:90%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  height: 90%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+/* .text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+} */
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.title{
+    background-color: orange;
+    margin-top: 0;
+    padding: 15px;
+    color:white;
+}
+
+
+
+.imag1{
+    background-image: url("imag1.jpg");
+    background-size: cover;
+    height: 95%;
+}
+
+
+.imag2{
+    background-image: url("imag2.jpg");
+    background-size: cover;
+    height: 95%;
+
+}
+
+
+.imag3{
+    background-image: url("imag3.jpg");
+    background-size: cover;
+    height: 95%;
+
+}
+
+
+.imag4{
+    background-image: url("imag4.jpg");
+    background-size: cover;
+    height: 95%;
+
+}
+
+
+
+        .container{
+    display: grid;
+    grid-template-rows: auto; 
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 100vh;
+    grid-gap: 0.8rem;
+    grid-template-areas: "header header header header"
+    /* "welcome welcome welcome welcome"
+    "account account account account" */
+    "menup menup menup menup"
+    "pimg pimg pimg sliderimg"
+    "details details details selling"
+    "compare shop cart selling"
+    "infos infos infos call4"
+    "footer1 footer1 footer1 footer1"
+    "footer2 footer2 footer2 footer2"
+    "footer3 footer3 footer3 footer3"
+
+
+    ;}
+
+
+.selling{
+    grid-area: selling;
+    margin-right: 35px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+    .produits{
+    /* background-color: white; */
+    display: grid;
+    /* background-color: rgb(145, 43, 51); */
+    grid-template-columns: 1fr  1fr;
+    grid-gap: 1rem;
+    grid-template-areas: "img1  img2"
+    "img3 img4";
+}
+
+    .details{
+        grid-area: details;
+        background-color: white;
+        /*box-shadow:  0.2em 0.2em 0.3em rgba(187, 187, 187, 0.3)*/;
+        margin-left: 35px;
+    
+    }
+    .shop{
+        grid-area: shop;
+        background-color: white;
+        /*box-shadow:  0.2em 0.2em 0.3em rgba(187, 187, 187, 0.3)*/;
+
+    }
+
+    .call4{
+        grid-area:call4;
+    }
+
+    .pimg{
+    grid-area: pimg;
+    margin-left: 35px;
+    }
+
+    .sliderimg{
+    grid-area: sliderimg;
+    }
+
+    .infos{
+    grid-area: infos;
+    background-color: white;
+    /*box-shadow:  0.2em 0.2em 0.3em rgba(187, 187, 187, 0.3)*/;
+
+    }
+
+
+
+
+    body{   
+
+    background-color: #f5f5f5 ;
+    margin:0;
+    padding:0;
+    }
+
+/* 
+    div{
+        background-color: white;
+    } */
+    .header{
+        grid-area: header;
+        /* background-color: aquamarine; */
+        background-color: rgb(151, 151, 151);
+   
+     
+
+    }
+
+    .logonsearch{
+        display: grid;
+        grid-template-areas: "logo search";
+        color: white;
+    }
+    .logo{
+        grid-area: logo;
+        margin-left: 50px;
+        /* background-color: aquamarine; */
+    }
+
+    .logo a{
+        color: white;
+    }
+
+    .search{
+        grid-area: search;
+        text-align: right;
+        margin-right: 50px;
+        /* background-color: red; */
+    }
+
+    .welcome{
+        grid-area: welcome;
+        /* background-color: royalblue; */
+    }
+
+    
+   .account{
+        grid-area: account;
+        /* background-color: sienna; */
+    }
+    .compare{
+        grid-area: compare;
+        background-color: white;
+        /*box-shadow:  0.2em 0.2em 0.3em rgba(187, 187, 187, 0.3)*/;
+
+        /* background-color: steelblue; */
+        margin-left: 35px;
+      
+    }
+
+  .menup{
+      grid-area: menup;
+      background-color: white;
+      /*box-shadow:  0.2em 0.2em 0.3em rgba(187, 187, 187, 0.3)*/;
+      margin-left: 35px;
+      margin-right: 35px;
+   
+      /* background-color: thistle; */
+  }
+
+.mainm{
+    padding: 20px;
+    display: grid;
+    grid-template-areas: "Home Furniture Appareils Electronic Music Ebooks";
+    padding-left: 70px;
+}
+
+.mainm a{
+    text-decoration: none;
+    color:black;
+}
+
+
+
+
+
+.cart{
+    grid-area: cart;
+    background-color: white;
+    /*box-shadow:  0.2em 0.2em 0.3em rgba(187, 187, 187, 0.3)*/;
+   
+    /* background-color: rgb(37, 216, 133); */
+}   
+
+
+
+
+
+
+.img1{
+grid-area: img1;
+    background-color: white;
+
+}
+
+.titre1{
+    grid-area: titre1;
+}
+
+.img2{
+grid-area: img2;
+    background-color: white;
+
+}
+
+
+.img3{
+grid-area: img3;
+    background-color: white;
+
+}
+
+.img4{
+grid-area: img4;
+    background-color: white;
+
+}
+
+.titre2{
+    grid-area: titre2;
+}
+
+
+
+
+.footer1{
+    grid-area: footer1;
+    /* background-color: rgb(28, 165, 219); */
+    margin-left: 35px;
+      margin-right: 35px;
+}  
+
+
+.footer2{
+    grid-area: footer2;
+    /* background-color: rgb(90, 90, 34); */
+    margin-left: 35px;
+      margin-right: 35px;
+}  
+
+.footer3{
+    grid-area: footer3;
+    /* background-color: rgb(49, 34, 49); */
+    margin-left: 35px;
+      margin-right: 35px;
+}  
+
+.color{
+    display: grid;
+    grid-template-areas: "box1 box2 box3 box4"
+    "texte texte texte texte" ;
+}
+
+
+.box{
+    width: 75px;
+    height:75px;
+}
+
+.texte{
+    grid-area: texte;
+}
+
+.box.box1{
+    grid-area: box1;
+     background-color: red; 
+}
+
+.box.box2{
+    background-color: yellow;
+}
+
+.box.box3{
+    background-color: purple;
+}
+
+.box.box4{
+    background-color: rgb(52, 131, 235);
+}
+
+.otherimg{
+    display: grid;
+    grid-gap:0.2rem;
+    grid-column: 0.3fr 0.3fr;
+    grid-template-areas: "other other1"
+    "other2 other2";
+}
+
+.other{
+    grid-area: other;
+}
+
+.other1{
+    grid-area: other1;
+}
+
+.other2{
+    grid-area: other2;
+}
+
+
+.thumbnail{
+width: 200px;
+height:200px;
+opacity:0.5;
+cursor: pointer;
+border:1px solid black;
+}
+
+
+.thumbnail:hover{
+    opacity:1;
+}
+
+#principal{
+    cursor:pointer;
+}
+
+.content{
+    display: grid;
+    grid-gap: 0.8rem;
+    grid-template-columns: 0.3fr 1fr;
+    grid-template-areas: "first firstdetails";
+    background-color: white;
+}
+
+.firstdetails{
+    margin-right: 35px ;
+}
+
+
+.button{
+    background-color: orange;
+    padding:10px;
+    border: none;
+    color: white;
+}
+
+.button2{
+    background-color: orange;
+    margin-bottom: 0;
+    padding: 8px;
+    border: none;
+    color:white;
+}
+
+.headerlinks a{
+    color: white;
+     
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "header"
+                             "menup"
+                             "sliderimg"
+                             "pimg"
+                             "details"
+                             "selling"
+                             "compare"
+                             "cart"
+                             "infos"
+                             "call4"
+                             "footer1"
+                             "footer2"
+                             "footer3";
+    }}
+
+    </style>
+</head>
+<body >
+
+
+    <div class="container" id="container">
+
+      <div class="header">
+
+                <div class="logonsearch">
+                    
+                    <div class="logo">
+                        <a href="index.html"> <h1 style="margin-left: 50px;"><h1> AfrikaBoutik</h1></a>
+                    </div>
+
+                    <div class="search">
+                       <input type="text" placeholder="faire une recherche">
+                       <button>recherche</button>
+                       <div style="margin-right: 50px;margin-bottom: 5px;">
+                           Bienvenue Elie
+                       </div>
+                       <div class="headerlinks" style="margin-right: 50px;  ">
+                        <a href="#"> My account</a>|  <a href="#">My wishes</a> |  <a href="#"> My Cart</a> | <a href="#"> Chcekout</a> | <a href="#">Login</a> 
+                    </div>
+                    </div>
+                    
+                </div>
+
+
+      </div>
+    
+    
+
+        <!-- <div class="welcome">
+                
+        </div>
+
+        <div class="account">
+        </div> -->
+        
+        <div class="menup" id="menu"> 
+            <div class="mainm" id="mainm">
+                <a class="liens Home" href="">HOME</a>
+                <a class=" Furniture" href="">FURNITURE</a>
+                <a class=" Appareils" href="">APPAREILS</a>
+                <a class=" Electronic" href="">ELECTRONIC</a>
+                <a class=" Music"  href="">MUSIC</a>
+                <a class=" Ebooks" href="">E-BOOK</a>
+            </div>
+        </div>
+
+
+
+        <div class="infos">
+            <h3>Additionnal informations</h3>
+
+            <p style="font-size: 18px;">
+                Plus besoin de chercher des chaises pour asseoir vos invités.
+                
+                Cette chaise s'harmonise avec les meubles de style contemporain ou design et trouve sa place partout grâce à son côté pratique et indémodable. La chaise pliante Billion prend peu de place, vous pouvez la ranger facilement car elle est extra plate.
+                
+                NB : Cette chaise n'est pas prévue pour un usage intensif (collectivité).</p>
+
+        </div>
+
+
+        <div class="pimg">
+            <div class="content">
+                <div class="first">
+                    <img id=principal src="images/tableronde.jpg" alt="" srcset="">
+                </div>
+                <div class="firstdetails">
+                    <h3 style="font-size:30px;">Table Ronde Pliable - Rouge</h3>
+                    <div>
+                        <p style="font-size:20px;">Recommandé a un ami</p>
+                        <img width="20px" src="images/star.png" alt="" srcset="">
+                        <img width="20px" src="images/star.png" alt="" srcset="">
+                        <img width="20px" src="images/star.png" alt="" srcset="">
+                        <img width="20px" src="images/star.png" alt="" srcset="">
+                        <p style="font-size:20px;"><del> 60000 fcrs</del></p>
+                       <p style="font-size:30px;">  <strong> 30000 fcrs</strong></p>
+
+                    </div>
+
+                    <form action="">
+                        <label for="" style="font-size:20px;">Quantité:</label>
+                        <select name="" id=""  style="width: 40px;height:40px;">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                        </select>
+<br> <br>
+                        <button class="button">Ajouter au panier</button>
+                    </form>
+                   <p>Ou</p>
+                   <p>
+                       <a href="http://">Comparer</a>
+                   </p>
+                   <p>
+                       <a href="http://">Ajouter a la wishlist</a>
+                   </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sliderimg ">
+            <div class="otherimg">
+                <div class="other">
+                    <img class="thumbnail active" src="images/tableronde.jpg" alt="" srcset="">
+                </div>
+
+                <div class="other1" style="margin-right: 18px;">
+                    <img class="thumbnail" src="images/tableronde2.jpg" alt="" srcset="">
+                </div>
+    
+            </div>
+
+        </div>
+
+
+        <div class="details">
+
+            <h3 style="font-size: 35px;">informations du Produit</h3>
+            <hr>
+
+
+            <h3>Details</h3>
+            <p style="font-size: 18px;">
+                Table ronde pliable vitrée haut qualité très solide et résistante de style simple et moderne.la couleur noire.Pratique pour la maison, bureau, restaurant et autres....
+Est-ce personnalisable :Oui .Offrez-vous le meilleur à un bon prix chez (Daketi shop).La qualité fait toujours la différence.
+            </p>
+        </div>
+
+
+
+        <div class="call4">
+            <h3 class="title">Vidéo</h3>
+            <iframe style="width: 90%; height: 80%;" src="https://www.youtube.com/embed/aN7WnodpP4Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+
+
+        <div class="selling">
+            <h3 class="title">Vous pourriez être intéressé</h3>
+             <div class="produits">
+ 
+                <div class="img1">
+                    <a href="pouf.html">  
+                        <img width="200"src="images/pouf1.jpg" alt="" srcset="">
+                   </a>
+                    <p>Pouf</p>
+                    <p>50000</p>
+                    
+                    <button class="button2">Ajouter au panier</button>
+                </div>
+
+                <div class="img2">
+                    <a href="tablepliable.html">
+                       <img width="200"src="images/tablep1.jpg" alt="" srcset="">
+                   </a>
+                   <p>Table</p>
+                   <p>25000 fcrs</p>
+                   <button class="button2">Ajouter au panier</button>
+               </div>
+                 
+                
+                <div class="img3">
+                    <a href="tableronde.html">
+                       <img width="200"src="images/tableronde.jpg" alt="" srcset="">
+
+                   </a>
+                   <p>Table ronde</p>
+                   <p>30000 frcs</p>
+                   <button class="button2">Ajouter au panier</button>
+
+               </div>
+
+               
+               <div class="img4">
+                   <a href="chaise.html">
+                       <img width="200"src="images/chaise1.jpg" alt="" srcset="">
+                   </a>
+                   <p>Chaise</p>
+                   <p>25000 frcs</p>
+                   <button class="button2">Ajouter au panier</button>
+
+               </div>
+             </div>
+             
+         </div> 
+
+
+
+
+
+
+
+        <div class="compare">
+            <h3 class="title">Compare Products(2)</h3>
+            <div>
+                <img width="100%" src="images/sacamain.jpg" alt="" srcset="">
+
+            </div>
+
+            <div style="margin-bottom: 0;">
+                <p>  <a href="http://">clear all</a>  <button class="button2" style="float: right;">comparer</button>
+                </p>
+            </div>
+        </div>
+
+        <div class="cart">
+            <h3 class="title">My Cart</h3>
+            <h3>
+               <center> <p>2 articles dans votre panier</p></center>
+            </h3>
+            <div>
+                <img width="30%" src="images/sac.jpg" alt="" srcset="">
+
+            </div>
+
+            <div>
+                <p>  <a href="http://">clear </a>   <button class="button2" style="float: right;">Chcekout</button> </p>
+            </div>
+
+            <div>
+                <img width="30%" src="images/sacamain.jpg" alt="" srcset="">
+
+            </div>
+
+            <div>
+                <p>  <a href="http://">clear all</a>   <button class="button2" style="float: right;">Chcekout</button> </p>
+            </div>
+
+        </div>
+
+
+
+        <div class="shop">
+            <h3 class="title"> Avis</h3>
+            <center>
+                <div style="margin-top:50px; font-size: 20px;">
+                    Comment trouvez vous votre boutique?
+                </div>
+            </center>
+         
+
+           
+                <div  style="margin-top:40px; font-size: 20px; margin-left:40px; margin-bottom: 20px;">
+                    <input type="checkbox" name="" id="great">
+                    <label for="great">great</label>
+                </div>
+    
+                <div  style="margin-top:40px; font-size: 20px; margin-left:40px; margin-bottom: 20px;">
+                    <input type="checkbox" name="" id="Amazing">
+                    <label for="great">Amazing</label>
+                </div>
+    
+                <div  style="margin-top:40px; font-size: 20px; margin-left:40px; margin-bottom: 20px;">
+                    <input type="checkbox" name="" id="success">
+                    <label for="success">My shop a succes</label>
+    
+                </div>
+                    
+                <div  style="margin-top:40px; font-size: 20px; margin-left:40px; margin-bottom: 20px;">
+                    <input type="checkbox" name="" id="wow">
+                    <label for="wow">Wow</label>
+                </div>
+
+                <div>
+                   <center>
+                    <button class="button2">Envoyer</button>
+                   </center> 
+                    
+                </div>
+    
+  
+        </div>
+
+        <div class="footer1">
+            <div>
+                <center>
+                    <p> <a href="http://">about us</a>| <a href="http://">customer service</a>|
+                        <a href="http://">flux Rss</a>
+                     </p>
+                </center>    
+                   
+                </div>
+    
+                <div class="footer2">
+                    <center><p> <a href="http://">Site Map</a>| <a href="http://">Recherche</a>|
+                        <a href="http://">Aide</a>|
+                        <a href="http://">Nous contacter</a>
+                     </p> </center>
+                </div>
+                <div class="footer3">
+                    <center>&copy; copyright 2020</center>
+                </div>  
+    
+    </div>
+
+    <script>
+
+        function change1(){
+
+            var liens = document.getElementsByTagName("a");
+            for(var i=0; i<liens.length; i++)
+            {
+                 liens[i].style.color = "red";
+                 document.getElementById("mainm").style.background="black";
+
+            }
+            document.getElementById("container").style.background = "yellow";
+
+        }
+
+    </script>
+
+
+    <script>
+             function change2(){
+
+            var liens = document.getElementsByTagName("a");
+            for(var i=0; i<liens.length; i++)
+            {
+                 liens[i].style.color = "yellow";
+                 document.getElementById("mainm").style.background="yellow";
+
+            }
+            document.getElementById("container").style.background = "orange";
+        }  
+
+    </script>
+
+    <script>
+        function change3(){
+
+    var liens = document.getElementsByTagName("a");
+    for(var i=0; i<liens.length; i++)
+    {
+            liens[i].style.color = "purple";
+            document.getElementById("mainm").style.background="brown";
+
+    }
+
+    } 
+
+    </script>
+
+
+    <script>
+        function change4(){
+
+    var liens = document.getElementsByTagName("a");
+    for(var i=0; i<liens.length; i++)
+    {
+            liens[i].style.color = "blue";
+            document.getElementById("mainm").style.background="magenta";
+
+
+    }
+    } 
+
+    </script>
+
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+    <script>
+       let otherimg = document.getElementsByClassName('thumbnail')
+       let activeimg = document.getElementsByClassName('active')
+        for(var i=0; i < otherimg.length; i++){
+           otherimg[i].addEventListener('click',function(){
+               if(activeimg.length > 0){
+                   activeimg[0].classList.remove('active')
+               }
+               this.classList.add('active')
+                document.getElementById('principal').src = this.src
+           })
+        }
+
+        
+
+    </script>
+
+</body>
+</html>

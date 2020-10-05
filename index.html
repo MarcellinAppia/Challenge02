@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  HEIGHT:90%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  height: 90%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+/* .text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+} */
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.imag1{
+    background-image: url("banner1.png");
+    background-size: cover;
+    height: 95%;
+}
+
+
+.imag2{
+    background-image: url("imag2.jpg");
+    background-size: cover;
+    height: 95%;
+
+}
+
+
+.imag3{
+    background-image: url("imag3.jpg");
+    background-size: cover;
+    height: 95%;
+
+}
+
+
+.imag4{
+    background-image: url("imag4.jpg");
+    background-size: cover;
+    height: 95%;
+
+}
+
+
+
+        .container{
+    display: grid;
+    grid-template-rows: auto; 
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 100vh;
+    grid-gap: 0.8rem;
+    grid-template-areas: "header header header header"
+    /* "welcome welcome welcome welcome"
+    "account account account account" */
+    "menup menup menup menup"
+    "call1 call3 call3 compare"
+    "call2 shopping shopping cart"
+    "tag selling selling call4"
+    "tag selling selling shop"
+    "footer1 footer1 footer1 footer1"
+    "footer2 footer2 footer2 footer2"
+    "footer3 footer3 footer3 footer3"
+
+
+    ;}
+
+    body{   
+    /* background-image: url("pagne.jpg"); */
+    background-color: #f5f5f5 ;
+    margin:0;
+    padding:0;
+    }
+
+/* 
+    div{
+        background-color: white;
+    } */
+    .header{
+        grid-area: header;
+        background-color: rgb(151, 151, 151);
+        color: white;
+     
+     
+
+    }
+
+    .logonsearch{
+        display: grid;
+        grid-template-areas: "logo search";
+    }
+    .logo{
+        grid-area: logo;
+        /* background-color: aquamarine; */
+        color: white;
+        margin-left: 50px;
+    }
+
+    .logo a{
+        color: white;
+       
+    }
+
+    .search{
+        grid-area: search;
+        text-align: right;
+        margin-right: 50px;
+        /* background-color: red; */
+    }
+
+    .welcome{
+        grid-area: welcome;
+        /* background-color: royalblue; */
+    }
+
+    
+   .account{
+        grid-area: account;
+        /* background-color: sienna; */
+    }
+    .compare{
+        grid-area: compare;
+        background-color: white;
+           box-shadow:  0.2em 0.2em 0.3em rgba(214, 213, 213, 0.3);;
+
+        /* background-color: steelblue; */
+      margin-right: 35px;
+    }
+
+  .menup{
+      grid-area: menup;
+      background-color: white;
+         box-shadow:  0.2em 0.2em 0.3em rgba(214, 213, 213, 0.3);;
+      margin-left: 35px;
+      margin-right: 35px;
+  
+
+      /* background-color: thistle; */
+  }
+
+.mainm{
+    padding: 10px;
+    display: grid;
+    grid-template-areas: "Home Furniture Appareils Electronic Music Ebooks";
+    padding-left: 70px;
+}
+
+.mainm a{
+    text-decoration: none;
+    color:black;
+  
+}
+
+
+.call1{
+    grid-area: call1;
+    background-color: white;
+       box-shadow:  0.2em 0.2em 0.3em rgba(214, 213, 213, 0.3);;
+
+    margin-left: 35px;
+     
+    /* background-color: rgb(191, 206, 216); */
+}   
+
+.call2{
+    grid-area: call2;
+    /* background-color: white; */
+       /* box-shadow:  0.2em 0.2em 0.3em rgba(214, 213, 213, 0.3);; */
+
+    margin-left: 35px;
+      
+
+    /* background-color: tomato; */
+}   
+
+.color{
+    box-shadow:  0.2em 0.2em 0.3em rgba(214, 213, 213, 0.3);
+}
+
+.call3{
+    grid-area: call3;
+    /* background-color: white;
+    box-shadow:  0.2em 0.2em 0.3em rgba(187, 187, 187, 0.3); */
+
+    /* background-color: yellowgreen; */
+}   
+
+.shopping{
+    grid-area: shopping;
+    /* background-color: turquoise; */
+       box-shadow:  0.2em 0.2em 0.3em rgba(214, 213, 213, 0.3);;
+
+}   
+
+
+.cart{
+    grid-area: cart;
+    background-color: white;
+       box-shadow:  0.2em 0.2em 0.3em rgba(214, 213, 213, 0.3);;
+   
+      margin-right: 35px;
+    /* background-color: rgb(37, 216, 133); */
+}   
+
+.tag{
+    grid-area: tag;
+    /* background-color: white; */
+       /* box-shadow:  0.2em 0.2em 0.3em rgba(214, 213, 213, 0.3);; */
+    margin-left: 35px;
+     
+    /* background-color: wheat; */
+}   
+
+
+.selling{
+    grid-area: selling;
+    background-color: white;
+    box-shadow:  0.2em 0.2em 0.3em rgba(214, 213, 213, 0.3);
+
+    /* background-color: rgb(221, 35, 221); */
+}  
+
+
+.produits{
+    background-color: white;
+    display: grid;
+    /* background-color: rgb(145, 43, 51); */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+    grid-template-areas: "img1 titre1 img2 titre2";
+}
+
+.img1{
+grid-area: img1;
+}
+
+.titre1{
+    grid-area: titre1;
+}
+
+.img2{
+grid-area: img2;
+}
+
+.titre2{
+    grid-area: titre2;
+}
+
+
+.call4{
+    grid-area: call4;
+    /* background-color: rgb(145, 94, 1); */
+    background-color:white;
+      margin-right: 35px;
+}  
+
+.shop{
+    grid-area: shop;
+    /* background-color: rgb(219, 123, 107); */
+    background-color:white;
+      margin-right: 35px;
+      box-shadow:  0.2em 0.2em 0.3em rgba(214, 213, 213, 0.3);
+}  
+
+.footer1{
+    grid-area: footer1;
+    /* background-color: rgb(28, 165, 219); */
+    margin-left: 35px;
+      margin-right: 35px;
+}  
+
+
+.footer2{
+    grid-area: footer2;
+    /* background-color: rgb(90, 90, 34); */
+    margin-left: 35px;
+      margin-right: 35px;
+}  
+
+.footer3{
+    grid-area: footer3;
+    /* background-color: rgb(49, 34, 49); */
+    margin-left: 35px;
+      margin-right: 35px;
+}  
+
+.color{
+    display: grid;
+    grid-template-areas: "box1 box2 box3 box4"
+    "texte texte texte texte" ;
+}
+
+
+.box{
+    width: 75px;
+    height:75px;
+    border-radius: 60px;
+}
+
+.texte{
+    grid-area: texte;
+}
+
+.box.box1{
+    grid-area: box1;
+     background-color: black; 
+}
+
+.box.box2{
+    background-color: brown;
+}
+
+.box.box3{
+    background-color: purple;
+}
+
+.box.box4{
+    background-color: rgb(85, 152, 240);
+}
+
+
+.button{
+    background-color: orange;
+    border: none;
+    padding:15px;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.title{
+    background-color: orange;
+    margin-top: 0;
+    padding: 10px;
+    color:white;
+}
+.button2{
+    background-color: orange;
+    margin-bottom: 0;
+    padding: 8px;
+    border: none;
+    color:white;
+}
+
+.headerlinks a{
+    color: white;
+     
+}
+    </style>
+</head>
+<body >
+
+
+    <div class="container" id="container">
+
+      <div class="header">
+
+                <div class="logonsearch">
+                    
+                    <div class="logo">
+                        <a href="index.html"> <h1 style="margin-left: 50px;"><h1> AfrikaBoutik</h1></a>
+                      
+                    </div>
+
+                    <div class="search">
+                       <input type="text" placeholder="faire une recherche">
+                       <button>recherche</button>
+                       <div style="margin-right: 50px; margin-bottom: 5px;">
+                           Bienvenue Elie
+                       </div>
+                      
+                       <div class="headerlinks" style="margin-right: 50px;"> 
+                          <a href="#"> My account</a>|  <a href="#">My wishes</a> |  <a href="#"> My Cart</a> | <a href="#"> Chcekout</a> | <a href="#">Login</a> 
+                       </div>
+                    </div>
+                    
+                </div>
+
+
+      </div>
+    
+    
+
+        <!-- <div class="welcome">
+                
+        </div>
+
+        <div class="account">
+        </div> -->
+        
+        <div class="menup" id="menu"> 
+            <div class="mainm" id="mainm">
+                
+                    <a class="mainm Home" href="">HOME</a>
+                    <a class="mainm Furniture" href="">FURNITURE</a>
+                    <a class="mainm Appareils" href="">APPAREILS</a>
+                    <a class="mainm Electronic" href="">ELECTRONIC</a>
+                    <a class="mainm Music"  href="">MUSIC</a>
+                    <a class="mainm Ebooks" href="">E-BOOK</a>    
+        
+            </div>
+        </div>
+
+        <div class="call1">
+            <div>
+                <a href="http://">
+                    <img width="100%" src="images/bomber1.jpg" alt="" srcset="">
+
+                </a>
+            </div>
+            <div style="background-color:red; color: white;margin-bottom: 0; padding: 5px; font-size: 30px;">
+             <a href="http://" style="color: white;"> <center> <strong>PROMO 25%</strong> </center> </a>  
+            </div>
+        </div>
+
+        <div class="call2">
+            <div class="color" style="background-color: white;">
+
+
+                <div class="texte" style="font-size: 15px;">
+                    <h3>Clickez Sur une couleur pour Changer de thème</h3>
+                </div>
+
+                <div class="box box1" id="boxone" onclick="change1()">
+
+                </div> 
+
+    
+                <div class="box box2" id="boxdeux" onclick="change2()">
+    
+                </div>
+    
+                <div class="box box3" id="boxtrois" onclick="change3()">
+    
+                </div>
+    
+                <div class="box box4" id="boxquatre" onclick="change4()">
+    
+                </div>
+    
+               
+            </div>
+            
+        </div>
+
+        <div class="call3">
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                
+
+                <div  href= "" class="mySlides fade imag1">
+                    <a href="tableronde.html">
+                         <img src="images/banner1.png" style="width:100%; height: 100%;" >
+
+                    </a>
+                <!-- <div class="numbertext">1 / 3</div> -->
+                <!-- <div class="text">Caption Text</div> -->
+                </div>
+            
+                <div class="mySlides fade imag2">
+                <!-- <div class="numbertext">2 / 3</div> -->
+                <!-- <img src="images/img2.jpg" style="width:100%;"> -->
+                <a href="chaise.html">
+                    <img src="images/banner2.png" style="width:100%; height: 100%;" >
+
+               </a>
+             
+                </div>
+            
+                <div class="mySlides fade imag3">
+                <!-- <div class="numbertext">3 / 3</div> -->
+                <!-- <img src="images/img3.jpg" style="width:100%;"> -->
+                <a href="pouf.html">
+                    <img src="images/banner3.png" style="width:100%; height: 100%;" >
+
+               </a>
+                </div>
+            
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <!-- <br> -->
+            
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+          
+        <div class="shopping">
+            <div>
+               <img width="100%" src="images/Payez.png" alt="" srcset="">
+            </div>
+        </div>
+         
+        <div class="compare">
+            <h3 class="title">Compare Products(2)</h3>
+
+            <p style="text-align: center;">
+                comparez des articles dans cette section
+            </p>
+            <div>
+                <a href="http://">
+                    <center><img width="300px" src="images/pochette.jpg" alt="" srcset=""></center>
+
+                </a>
+                <center><img width="20px" src="images/vs.png" alt="" srcset=""></center>
+
+            </div>
+
+            <div>
+                <p>  <a href="http://">clear all</a>  <button class="button2" style="float: right;">Comparer</button>  </p>
+            </div>
+        </div>
+
+        <div class="cart">
+            <h3 class="title">My Cart</h3>
+            <h3>
+               <center> <p>2 articles dans votre panier</p></center>
+            </h3>
+            <div>
+                <img width="30%" src="images/sac.jpg" alt="" srcset="">
+
+            </div>
+
+            <div>
+                <p>  <a href="http://">clear </a>   <button class="button2" style="float: right;">Chcekout</button> </p>
+            </div>
+
+            <div>
+                <img width="30%" src="images/sacamain.jpg" alt="" srcset="">
+
+            </div>
+
+            <div>
+                <p>  <a href="http://">clear all</a>   <button class="button2" style="float: right;">Chcekout</button> </p>
+            </div>
+
+        </div>
+
+        <div class="tag">
+            <div class="tagtext" style="background-color: white;">
+                <p>
+                    <strong style="font-size: 30px;">Furniture</strong> <strong style="font-size: 20px;">good</strong> <strong style="font-size: 30px;">great</strong> <strong style="font-size: 25px;">cool</strong>
+                </p>
+    
+                <p>
+                    <strong style="font-size: 35px;">Meubles</strong> <strong style="font-size: 60px;">Mode</strong> <strong style="font-size: 30px;">Electronic</strong> <strong style="font-size: 25px;">Saper</strong>
+                </p>
+
+                <p>
+                    <strong style="font-size: 35px;">Music</strong> <strong style="font-size: 60px;">Accessoires</strong> <strong style="font-size: 30px;">Chic</strong> <strong style="font-size: 25px;">Class</strong>
+                </p>
+
+    
+            </div>
+        </div>
+
+       <div class="selling">
+           <h3 class="title">A Découvrir</h3>
+            <div class="produits">
+
+                <div class="img1">
+                    <img width="200"src="images/sac.jpg" alt="" srcset="">
+                </div>
+                <div class="titre1 tile">
+                    <h3>Sad à dos motif Pagne</h3>
+                    <p>15250 frcs</p>
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+
+                     <button class="button2">Ajouter au panier</button> 
+                </div>
+
+                <div class="img2">
+                    <img width="200" src="images/foulard.jpg" alt="" srcset="">
+                </div>
+                <div class="titre2">
+                    <h3>Foulard</h3>
+                    <p>15250 frcs</p>
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+
+                    <button class="button2">Ajouter au panier</button>
+                </div>
+
+                <div class="img3">
+                    <img width="200"src="images/noeud.jpg" alt="" srcset="">
+                   
+                </div>
+                <div class="titre3">
+                    <h3>Noeud</h3>
+                    <p>15250 frcs</p>
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+
+                    <button class="button2">Ajouter au panier</button>
+                </div>
+
+                <div class="img4">
+                    <img width="200"src="images/pochette.jpg" alt="" srcset="">
+                </div>
+                <div class="titre4">
+                    <h3>Pochette</h3>
+                    <p>15250 frcs</p>
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+
+                    <button class="button2">Ajouter au panier</button>
+                </div>
+
+                <div class="img5">
+                    <img width="200"src="images/sandalespagnes.jpg" alt="" srcset="">
+                </div>
+                <div class="titre5">
+                    <h3>Sandales motif pagne</h3>
+                    <p>15250 frcs</p>
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+
+                    <button class="button2">Ajouter au panier</button>
+                </div>
+
+                <div class="img6">
+                    <img width="200"src="images/sacamain.jpg" alt="" srcset="">
+                 </div>
+                <div class="titre6">
+                    <h3>Sac à main</h3>
+                    <p>15250 frcs</p>
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+                    <img width="20px" src="images/star.png" alt="" srcset="">
+
+                    <button class="button2">Ajouter au panier</button>
+                </div>
+
+
+
+                
+            </div>
+            
+        </div> 
+
+        <div class="call4" >
+            <h3 class="title">Vidéo</h3>
+            <iframe style="padding: 20px;" src="https://www.youtube.com/embed/aN7WnodpP4Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+
+        <div class="shop">
+            <h3 class="title"> Avis</h3>
+            <center>
+                <div style="margin-top:50px; font-size: 20px;">
+                    Comment trouvez vous votre boutique?
+                </div>
+            </center>
+         
+
+           
+                <div  style="margin-top:40px; font-size: 20px; margin-left:40px; margin-bottom: 20px;">
+                    <input type="checkbox" name="" id="great">
+                    <label for="great">great</label>
+                </div>
+    
+                <div  style="margin-top:40px; font-size: 20px; margin-left:40px; margin-bottom: 20px;">
+                    <input type="checkbox" name="" id="Amazing">
+                    <label for="great">Amazing</label>
+                </div>
+    
+                <div  style="margin-top:40px; font-size: 20px; margin-left:40px; margin-bottom: 20px;">
+                    <input type="checkbox" name="" id="success">
+                    <label for="success">My shop a succes</label>
+    
+                </div>
+                    
+                <div  style="margin-top:40px; font-size: 20px; margin-left:40px; margin-bottom: 20px;">
+                    <input type="checkbox" name="" id="wow">
+                    <label for="wow">Wow</label>
+                </div>
+
+                <div>
+                   <center>
+                    <button class="button2" style="margin-bottom: 20px;">Envoyer</button>
+                   </center> 
+                    
+                </div>
+    
+        </div>
+
+        <div class="footer1">
+            <div>
+            <center>
+                <p> <a href="http://">about us</a>| <a href="http://">customer service</a>|
+                    <a href="http://">flux Rss</a>
+                 </p>
+            </center>    
+               
+            </div>
+
+            <div class="footer2">
+                <center><p> <a href="http://">Site Map</a>| <a href="http://">Recherche</a>|
+                    <a href="http://">Aide</a>|
+                    <a href="http://">Nous contacter</a>
+                 </p> </center>
+            </div>
+            <div class="footer3">
+                <center>&copy; copyright 2020</center>
+            </div>  
+        </div>
+
+    
+       
+
+      
+             
+        
+
+    </div>
+
+    <script>
+
+        function change1(){
+
+            var liens = document.getElementsByClassName("mainm");
+            var title = document.getElementsByClassName("title");
+            var log = document.getElementsByClassName("logonsearch");
+
+            for(var i=0; i<liens.length; i++)
+            {
+                 liens[i].style.color = "white";
+                 liens[i].style.background = "black";
+
+            }
+
+            for(var i=0; i<title.length; i++)
+            {
+                title[i].style.background = "black";
+                
+            }
+
+            
+            for(var i=0; i<log.length; i++)
+            {
+                log[i].style.background = "black";
+                log[i].style.color = "white";
+                
+            }
+            
+            for(var i=0; i<hlinks.length; i++)
+            {
+                hlinks[i].style.color = "white";
+                
+            }
+
+        }
+
+    </script>
+
+
+    <script>
+             function change2(){
+
+                var liens = document.getElementsByClassName("mainm");
+            var title = document.getElementsByClassName("title");
+            var log = document.getElementsByClassName("logonsearch");
+
+
+            for(var i=0; i<liens.length; i++)
+            {
+                 liens[i].style.color = "white";
+                 liens[i].style.background = "brown";
+                
+
+            }
+
+            for(var i=0; i<title.length; i++)
+            {
+                title[i].style.background = "brown";
+                
+            }
+
+            for(var i=0; i<log.length; i++)
+            {
+                log[i].style.background = "brown";
+                log[i].style.color = "white";
+                
+            }
+
+     
+
+
+        }  
+
+    </script>
+
+
+
+
+
+
+
+
+    <script>
+        function change3(){
+
+            var liens = document.getElementsByClassName("mainm");
+            var title = document.getElementsByClassName("title");
+            var log = document.getElementsByClassName("logonsearch");
+
+            for(var i=0; i<liens.length; i++)
+            {
+                 liens[i].style.color = "white";
+                 liens[i].style.background = "purple";
+                
+
+            }
+
+            for(var i=0; i<title.length; i++)
+            {
+                title[i].style.background = "purple";
+                title[i].style.color = "white";
+                
+            }
+
+            for(var i=0; i<log.length; i++)
+            {
+                log[i].style.background = "purple";
+                log[i].style.color = "white";
+                
+            }
+
+            
+
+    } 
+
+    </script>
+
+
+    <script>
+        function change4(){
+
+            var liens = document.getElementsByClassName("mainm");
+            var title = document.getElementsByClassName("title");
+            var log = document.getElementsByClassName("logonsearch");
+
+            for(var i=0; i<liens.length; i++)
+            {
+                 liens[i].style.color = "white";
+                 liens[i].style.background = "rgb(85, 152, 240)";
+
+            }
+
+            for(var i=0; i<title.length; i++)
+            {
+                title[i].style.background = "rgb(85, 152, 240)";
+                title[i].style.color = "white";
+                
+            }
+
+            for(var i=0; i<log.length; i++)
+            {
+                log[i].style.background = "rgb(85, 152, 240)";
+                log[i].style.color = "white";
+                
+            }
+
+
+        }
+
+    </script>
+
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+</body>
+</html>
